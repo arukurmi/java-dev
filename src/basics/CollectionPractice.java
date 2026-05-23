@@ -1,6 +1,4 @@
 package basics;
-import javax.print.attribute.IntegerSyntax;
-import java.sql.Array;
 import java.util.*;
 
 public class CollectionPractice {
@@ -173,16 +171,19 @@ public class CollectionPractice {
      */
 
     public static int[] twoSum(int[] nums, int target){
-        Set<Integer> storage = new HashSet<>();
-        for(int num : nums){
-            int diff = target - num;
-            if(storage.contains(diff)) {
-                return new int[]{num, diff};
-            } else {
-                storage.add(num);
+        Map<Integer, Integer> valueToIndex = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int needed = target - nums[i];
+
+            if (valueToIndex.containsKey(needed)) {
+                return new int[]{valueToIndex.get(needed), i};
             }
+
+            valueToIndex.put(nums[i], i);
         }
-        return new int[]{-1,-1};
+
+        return new int[]{-1, -1};
     }
 
 
@@ -279,9 +280,9 @@ public class CollectionPractice {
         while(!minHeap.isEmpty()){
             res.add(minHeap.poll());
         }
-        return res.reversed();
+        Collections.reverse(res);
+        return res;
     }
-
 
     /*
      * Problem 8: Group Words By Length
