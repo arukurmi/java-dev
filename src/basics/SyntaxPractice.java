@@ -3,7 +3,7 @@ package basics;
 public class SyntaxPractice {
 
     public static boolean isPrime(int num) {
-        for(int i=1; i<num/i; i++){
+        for(int i=2; i<num/i; i++){
             if(num%i == 0){
                 return false;
             }
@@ -15,7 +15,7 @@ public class SyntaxPractice {
         int min = Integer.MIN_VALUE;
         int res = arr[0];
         for(int num : arr) {
-            if(res > num) res = num;
+            if(res < num) res = num;
         }
         return res;
     }
@@ -47,7 +47,7 @@ public class SyntaxPractice {
         int[] arr = {4,1,9,2,10};
         String surajName = "Suraj Bhan Mundo";
 
-        System.out.println(isPrime(17));
+        System.out.println(isPrime(14));
         System.out.println(maxInArr(arr));
         System.out.println(reverseString(surajName));
         System.out.println(countVowels(surajName));
