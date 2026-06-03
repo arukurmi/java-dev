@@ -11,14 +11,14 @@ public class RateLimiterService {
                 UserTier.FREE,
                 RateLimiterFactory.createRateLimiter(
                         RateLimiterType.TOKEN_BUCKET,
-                        new RateLimitConfig(10, 60)
+                        new RateLimiterConfig(10, 60)
                 )
         );
         rateLimiters.put(
                 UserTier.PREMIUM,
                 RateLimiterFactory.createRateLimiter(
                         RateLimiterType.FIXED_WINDOW,
-                        new RateLimitConfig(10, 60)
+                        new RateLimiterConfig(10, 60)
                 )
         );
     }

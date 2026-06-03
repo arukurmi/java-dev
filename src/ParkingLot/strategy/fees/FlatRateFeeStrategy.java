@@ -1,8 +1,8 @@
-package ParkingLot.strategy;
+package ParkingLot.strategy.fees;
 
 import ParkingLot.entities.ParkingTicket;
 
-public class FlatRateFeeStructure implements FeeStrategy{
+public class FlatRateFeeStrategy implements FeeStrategy{
     private static final double RATE_PER_HOUR = 10.0;
 
     @Override

@@ -1,4 +1,4 @@
-package ParkingLot.strategy;
+package ParkingLot.strategy.fees;
 
 import ParkingLot.entities.ParkingTicket;
 

@@ -1,11 +1,11 @@
-package ParkingLot.strategy;
+package ParkingLot.strategy.fees;
 
 import ParkingLot.entities.ParkingTicket;
 import ParkingLot.vehicle.VehicleSize;
 
 import java.util.Map;
 
-public class HourBasedFeeStructure implements FeeStrategy {
+public class HourBasedFeeStrategy implements FeeStrategy {
     private static final Map<VehicleSize, Double> HOURLY_RATES = Map.of(
             VehicleSize.SMALL, 10.0,
             VehicleSize.MEDIUM, 20.0,

@@ -19,7 +19,7 @@ public class SlidingWindowRateLimiter extends RateLimiter{
 
         requestLog.compute(userId, (id, log) -> {
             if(log == null) log = new ArrayDeque<>();
-            while(!log.isEmpty() && (now - log.peak()) >= config.getWindowInSeconds()){
+            while(!log.isEmpty() && (now - log.peek()) >= config.getWindowInSeconds()){
                 log.poll();
             }
             if(log.size() < config.getMaxRequests()){

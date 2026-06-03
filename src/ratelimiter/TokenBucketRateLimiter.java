@@ -29,12 +29,12 @@ public class TokenBucketRateLimiter extends RateLimiter{
     }
 
     private int refillTokens(String userId, long now){
-        double refillRate = (double) config.getWindowInSeconds() / config.getMaximumRequests();
+        double refillRate = (double) config.getWindowInSeconds() / config.getMaxRequests();
         long lastRefill = lastRefillTime.getOrDefault(userId, now);
         long elapsedSeconds = (now - lastRefill) / 1000;
         int refillTokens = (int) (elapsedSeconds / refillRate);
 
-        int currentTokens = tokens.getOrDefault(userId, config.getMaximumRequests());
+        int currentTokens = tokens.getOrDefault(userId, config.getMaxRequests());
         currentTokens = Math.min(config.getMaxRequests(), currentTokens + refillTokens);
         if(refillTokens > 0) lastRefillTime.put(userId, now);
 
