@@ -40,6 +40,4 @@ public class TokenBucketRateLimiter extends RateLimiter{
 
         return currentTokens;
     }
-
-
 }
