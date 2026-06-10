@@ -1,0 +1,124 @@
+Java + OOP Revision Questions
+A. Java Practice.basics
+
+1. What is the difference between public static void main(String[] args) and a normal method?
+starting point of a java application, to be put in main starting class that will be run by java compiler.
+
+2. Why can’t we use this inside a static method?
+because this is used to refer to a class's variables, if the class is static that means the variable are also static and need not be infeered
+
+3. What does final mean for this?
+private final int[] arr;
+final means that the value of this array variable cannot be mutated by any other variable/class/functions, once it is declared in the constructor
+
+
+Does it mean array values can’t change?
+no it wl not change.
+
+4. What is the difference between these two?
+int x; -> primitive type
+Integer y; -> n
+
+on primitive, that is it is to be used by Objects/Collections in Java.
+
+5. Why does this fail?
+List<int> nums = new ArrayList<>();
+use Integer, not int.
+
+6. What is autoboxing in Java?
+do not knwo about this, you have not taught about this
+
+B. Scanner/input
+7. Why does this cause empty string input?
+int n = scanner.nextInt();
+String name = scanner.nextLine();
+cause when nextInt is entered, we do 3 then enter and that enter is taken as nextLine;
+
+8. What are two ways to fix the nextInt() + nextLine() issue?
+Not sure on that
+
+C. OOP and encapsulation
+
+9. Why is this bad?
+public int position;
+cause any function can mutate this
+
+10. Why is this better?
+private int position;
+cause no function can mutate this
+
+public int getPosition() {
+    return position;
+}
+
+11. What should a constructor validate? Give 2 examples from your Snake and Ladder code.
+Validate the accetable values, and 2nd maybe type of values.
+
+12. What does this mean?
+this.name = name;
+this instance has the name name, which is being sent in constructor.
+
+13. Why should Player.name be private final instead of public final?
+cause once the name is decided, it should only be mutated by public functions inside that class.
+
+14. What is the difference between object field and local variable?
+object field is keys inside the object, local variable is a local variable.
+
+D. Enums
+
+15. Why is enum better than String for fixed values? Example: SNAKE, LADDER.
+cause if any namuing changes in future we can add it to enums and values cn be changes at one place only.
+
+16. When should we use an enum in an LLD problem?
+to define fixed values.
+
+17. If you create JumperType, but don’t store it inside SnakeAndLadderJumper, what design smell is that?
+creating extra objects, writing extra code.
+
+E. Collections
+18. When should you use List, Set, Map, and Queue? One-line each.
+list for array/list, set for storing unique, map for stroing unique keys and value pair, queue for queue.
+
+19. Why was Map<Player, Integer> okay only if we used the same Player object reference?
+yes
+
+20. What are equals() and hashCode() used for in Practice.HashMap / HashSet?
+not sure about this
+
+21. Why is Queue<Player> useful in Snake and Ladder?
+to mantain the order of players.
+
+F. State update and debugging
+22. What was the main bug when everyone stayed at position 1?
+not sure about that, have forgotten that bug, leave this for now.
+
+23. Why is this wrong?
+int newPosition = currentPosition + diceRoll;
+System.out.println(newPosition);
+currentPositions.put(player, currentPosition);
+
+24. What is the correct flow for a Snake and Ladder turn?
+Mention:
+current position
+dice roll
+new position
+snake/ladder
+store final position
+re-add player
+G. LLD design
+25. In Snake and Ladder, what should Game own?
+Game state
+
+26. What should Board own?
+Board's state
+
+27. Why is putting all setup logic inside main() bad for SDE-2 LLD?
+not sure, according to me the requirements are such taht we need not create a separate class to take name and snake and ladder as input so that is why we have dclared it in the main class only to showcase our solution
+28. What is the difference between “code works” and “LLD quality code”?
+ad borken code can work too but a code needs ot be polished and divided into class and folllow oops princple + design pattern for quality code. so that in future all software princples, like liskov, dry, kiss, principles are followed with minimum code changes..
+
+29. What are invariants? Give one example from Dice or Jumper.
+no idea
+
+30. What is one reason to prefer constructor injection in Spring Boot?
+no idea
