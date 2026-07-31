@@ -11,5 +11,10 @@ public abstract class Pizza {
 
     protected void prepare(){
         System.out.println("Preparing pizza: " + this.name + "; Adding toppings: " + toppings);
+    }
+    protected void bake(){
+        System.out.println("Baking pizza: " + this.name);
+    }
+    protected void cut(){
 }
 }
