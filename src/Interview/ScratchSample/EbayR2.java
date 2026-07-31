@@ -42,7 +42,15 @@ public class EbayR2 {
             Map<String, String> tempkv = new LinkedHashMap<>();
             for (String[] kv : sectionKeyValue.get(i)) {
                 tempkv.put(kv[0], kv[1]);
-}
+            }
+            res.put(sectionName.get(i), tempkv);
+        }
+
+        return res;
+    }
+
+    public static void main(String[] args) {
+        String[] input = {
 }
 }
 }
