@@ -22,6 +22,16 @@ public class EbayR2 {
                 sectionKeyValue.add(new ArrayList<>());
                 currentSection++;
                 continue;
+            }
+            if (currentSection == -1) {
+                throw new IllegalArgumentException("Invalid hierarchy followed in input");
+            }
+            int eqPos = line.indexOf('=');
+            String key = line.substring(0, eqPos).trim();
+            String value = line.substring(eqPos + 1).trim();
+            List<String[]> pairsTillNow = sectionKeyValue.get(currentSection);
+            Set<String[]> keySet = new HashSet<>(pairsTillNow);
+            if (keySet.contains(key)) {
 }
 }
 }
