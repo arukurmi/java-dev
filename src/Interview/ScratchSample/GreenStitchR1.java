@@ -17,5 +17,13 @@ public class GreenStitchR1 {
     public static String findLongestPalindromicSubstring(String inputString) {
         String longestPalindrome = "";
         int lenthOfInputString = inputString.length();
+
+        for(int itr=0; itr<lenthOfInputString; itr++){
+            int leftPtr = itr;
+            int rightPtr = itr+1;
+            if(rightPtr+1 < lenthOfInputString && inputString.charAt(leftPtr) == inputString.charAt(rightPtr+1)) rightPtr++;
+            while (leftPtr >= 0 && rightPtr < lenthOfInputString && inputString.charAt(leftPtr) == inputString.charAt(rightPtr)) {
+}
+}
 }
 }
