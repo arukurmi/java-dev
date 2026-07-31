@@ -32,6 +32,16 @@ public class EbayR2 {
             List<String[]> pairsTillNow = sectionKeyValue.get(currentSection);
             Set<String[]> keySet = new HashSet<>(pairsTillNow);
             if (keySet.contains(key)) {
+                throw new IllegalArgumentException("Duplicate key in section: " + sectionName.getLast());
+            }
+            pairsTillNow.add(new String[]{key, value});
+        }
+
+        Map<String, Map<String, String>> res = new LinkedHashMap<>();
+        for (int i = 0; i < sectionName.size(); i++) {
+            Map<String, String> tempkv = new LinkedHashMap<>();
+            for (String[] kv : sectionKeyValue.get(i)) {
+                tempkv.put(kv[0], kv[1]);
 }
 }
 }
