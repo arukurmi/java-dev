@@ -8,4 +8,10 @@ public abstract class Beverage {
     @Getter
     @Setter
     public Size size;
+
+    public String getDescription(){
+        return description;
+    }
+
+    public abstract double cost();
 }
