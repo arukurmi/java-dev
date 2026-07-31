@@ -13,6 +13,16 @@ public class EbayR2 {
         int currentSection = -1;
 
         for (String s : input) {
+            String line = s.trim();
+            if (line.isEmpty() || line.charAt(0) == ';' || line.charAt(0) == '#') continue;
+
+            if (line.charAt(0) == '[' && line.charAt(line.length() - 1) == ']') {
+                String temp = line.substring(1, line.length() - 1).trim();
+                sectionName.add(temp);
+                sectionKeyValue.add(new ArrayList<>());
+                currentSection++;
+                continue;
+}
 }
 }
 }
