@@ -12,5 +12,9 @@ public class ChicagoVeggiePizza extends Pizza {
         toppings.add("brocolli");
         toppings.add("Mushrooms");
         toppings.add("Cheese");
-}
+    }
+
+    public void cut(){
+        System.out.println("Cutting pizza in square" + name);
+    }
 }
