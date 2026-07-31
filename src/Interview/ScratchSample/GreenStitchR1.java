@@ -35,4 +35,10 @@ public class GreenStitchR1 {
 
         return longestPalindrome;
     }
+
+    public static void main(String[] args) {
+        String inputString = "BBABCBAB";
+        String res = findLongestPalindromicSubstring(inputString);
+        System.out.println(res);
+    }
 }
