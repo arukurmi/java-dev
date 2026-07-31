@@ -51,6 +51,22 @@ public class EbayR2 {
 
     public static void main(String[] args) {
         String[] input = {
-}
-}
+                "; Database configuration",
+                "[database]",
+                "host = localhost",
+                "port=5432",
+                "",
+                "[server]",
+                "threads = 8",
+                "debug = true",
+                "# End of file"
+        };
+        Map<String, Map<String, String>> res = new LinkedHashMap<>();
+        try {
+            res = convert(input);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println(res);
+    }
 }
