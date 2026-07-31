@@ -13,4 +13,11 @@ public class WhipCream extends CondimentsDecorator {
     public String getDescription(){
         return beverage.getDescription() + ", WhipCream";
     }
+
+    public double cost(){
+        if(getSize() == Size.TALL) WhipCreamCost = 0.20;
+        if(getSize() == Size.GRAND) WhipCreamCost = 0.40;
+        if(getSize() == Size.VENTI) WhipCreamCost = 0.50;
+        return this.beverage.cost() + WhipCreamCost;
+    }
 }
