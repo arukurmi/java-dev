@@ -23,6 +23,13 @@ public class GreenStitchR1 {
             int rightPtr = itr+1;
             if(rightPtr+1 < lenthOfInputString && inputString.charAt(leftPtr) == inputString.charAt(rightPtr+1)) rightPtr++;
             while (leftPtr >= 0 && rightPtr < lenthOfInputString && inputString.charAt(leftPtr) == inputString.charAt(rightPtr)) {
+                leftPtr--;
+                rightPtr++;
+            }
+            leftPtr++;
+            rightPtr--;
+            if (longestPalindrome.length() < rightPtr + 1 - leftPtr) {
+                longestPalindrome = inputString.substring(leftPtr, rightPtr + 1);
 }
 }
 }
