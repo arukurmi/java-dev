@@ -7,5 +7,11 @@ import Practice.factoryPattern.PizzaFactory;
 
 public class NyPizzaFactory extends PizzaFactory {
     public Pizza createPizza(String orderType){
-}
+        return switch (orderType) {
+            case "cheese" -> new NyStyleCheesePizza();
+            case "Veggie" -> new NyStyleVeggiePizza();
+//            case "Future cases" -> new FutureCasesPizza();
+            default -> new NyStyleCheesePizza();
+        };
+    }
 }
