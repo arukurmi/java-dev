@@ -16,5 +16,9 @@ public abstract class Pizza {
         System.out.println("Baking pizza: " + this.name);
     }
     protected void cut(){
-}
+        System.out.println("Cutting pizza in diagonal: " + this.name);
+    }
+    protected void box(){
+        System.out.println("Packing pizza: " + this.name);
+    }
 }
