@@ -30,7 +30,9 @@ public class GreenStitchR1 {
             rightPtr--;
             if (longestPalindrome.length() < rightPtr + 1 - leftPtr) {
                 longestPalindrome = inputString.substring(leftPtr, rightPtr + 1);
-}
-}
-}
+            }
+        }
+
+        return longestPalindrome;
+    }
 }
