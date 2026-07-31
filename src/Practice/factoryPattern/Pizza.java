@@ -5,4 +5,11 @@ import java.util.List;
 
 public abstract class Pizza {
     protected String name;
+    protected String dough;
+    protected String sauce;
+    protected List<String> toppings = new ArrayList<>();
+
+    protected void prepare(){
+        System.out.println("Preparing pizza: " + this.name + "; Adding toppings: " + toppings);
+}
 }
