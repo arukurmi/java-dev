@@ -19,3 +19,4 @@ public class NewsChannelObserver implements Observer{
         System.out.println("Breaking news! The temperature has risen to : " + temperature + " along with humidity crossing: " + humidity);
     }
 }
+ 
