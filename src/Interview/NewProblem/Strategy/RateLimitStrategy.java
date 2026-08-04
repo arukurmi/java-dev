@@ -1,4 +1,5 @@
 package Interview.NewProblem.Strategy;
 
-public class RateLimitStrategy {
+public interface RateLimitStrategy {
+    boolean allowRequests(String key);
 }
