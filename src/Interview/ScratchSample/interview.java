@@ -1,4 +1,4 @@
-package Interview;
+package Interview.ScratchSample;
 
 public class interview {
     /*
