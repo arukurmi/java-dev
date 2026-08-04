@@ -9,4 +9,8 @@ public class FixedWindowStrategy implements RateLimitStrategy{
         this.maxRequests = rlconfig.getMaxRequests();
         this.windowMillis = rlconfig.getWindowMillis();
     }
+    public boolean allowRequests(String key){
+        // Logic for fixed window
+    }
+
 }
