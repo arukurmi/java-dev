@@ -1,4 +1,6 @@
 package Interview.NewProblem.Strategy;
 
-public class FixedWindowStrategy {
+import Interview.NewProblem.RateLimitConfig;
+
+public class FixedWindowStrategy implements RateLimitStrategy{
 }
