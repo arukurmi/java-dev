@@ -1,5 +1,8 @@
 package Interview;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class UnionFind {
     int n;
     int[] parent, rank;
@@ -10,6 +13,8 @@ public class UnionFind {
         for(int i=0; i<n; i++){
             parent[i] = i;
         }
+        List<Integer> dis = new LinkedList<>();
+        dis.add
     }
 
     public int find(int x){
