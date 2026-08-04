@@ -4,4 +4,5 @@ import Interview.NewProblem.RateLimitConfig;
 
 public class FixedWindowStrategy implements RateLimitStrategy{
     private long maxRequests;
+    private long windowMillis;
 }
