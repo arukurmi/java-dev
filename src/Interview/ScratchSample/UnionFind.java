@@ -1,4 +1,4 @@
-package Interview;
+package Interview.ScratchSample;
 
 import java.util.LinkedList;
 import java.util.List;
